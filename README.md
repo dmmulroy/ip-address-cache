@@ -19,7 +19,7 @@ However, if I had more time, these are a few things that I would do differently
 
 ## How does your code work?
 
-My general approach to solving this problem was to keep it as simple as possible and take advantage of the fact that we only ever have to track the top 100 most frequent IP addresses (a static value). I utilized two fundamental and basic data structures to implement my solution; an array (`frequencyList`) and a hashmap (`frequencyCache`). The hashmap is responsible for storing the frequency in which we handle each IP Address and has the following type: `Record<string, number>` while the array is responsible for storing the most frequently (or top 100) handled IP Addresses. The "caching algorithim" works as follows when `request_handled` is called:
+My general approach to solving this problem was to keep it as simple as possible and take advantage of the fact that we only ever have to track the top 100 most frequent IP addresses (a static value). I utilized two fundamental and basic data structures to implement my solution; an array (`frequencyList`) and a hashmap (`frequencyCache`). The hashmap is responsible for storing the frequency in which we handle each IP Address and has the following type: `Record<string, number>` while the array is responsible for storing the most frequently (or top 100) handled IP Addresses. The "caching algorithm" works as follows when `request_handled` is called:
 
 - If an IP Address is already stored in the `frequencyCache`
   - Increment the frequency in the `frequencyCache`
