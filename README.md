@@ -8,7 +8,7 @@ However, if I had more time, these are a few things that I would do differently
 
 - Since the frequency list will only ever have a max size of 100, the default v8 implementation of `.sort` is fairly performant but I would like to implement a more efficient sorting algorithim for the list (likely Insertion Sort as it works well for nearly sorted lists).
 - A potential future improvement of making the frequency list (top100) configurable rather than static. This could lead to performance concerns however and leads me to my next point.
-- If the frequency list was configuring, I'd switch to using a Balanced Tree Structure like an AVL Tree to maintain the ache. This would introduce some drawbacks around the performance of `request_handled` and `top100` (maybe `topN` in this scenario), namely going from O(1) to O(log n) but at the benefit of being able to maintain a full list sorted by frequency for the entire cache.
+- If the frequency list was configurable, I'd switch to using a Balanced Tree Structure like an AVL Tree to maintain the ache. This would introduce some drawbacks around the performance of `request_handled` and `top100` (maybe `topN` in this scenario), namely going from O(1) to O(log n) but at the benefit of being able to maintain a full list sorted by frequency for the entire cache.
 - In a real production environment I would likely move to off load the caching to a solution like Redis and rely on that rather than storing the cache in application memory.
 
 ## What is the runtime complexity of each function?
