@@ -44,7 +44,7 @@ I initially considered two other approaches before settling on my current implem
 
 ## How would you test this?
 
-I actually wrote a small test suite to test this and can seen in `src/ipAddressCache.test.ts`, as far as unit testing the test suite covers the following functionality:
+I actually wrote a small test suite to test this and can seen in `src/ipAddressCache.test.ts`. As far as unit testing goes, the test suite covers the following functionality:
 
 - it correctly maintains the order of the most frequently seen IP Addresses
 - it inserts new IP Addresses into the frequencyList (top100) if the length is lower than 100
