@@ -9,7 +9,7 @@ export class IpAddressCache {
   }
 
   /**
-   * Handles caching IP Addresses on a per request basis. The caching algorithim
+   * Handles caching IP Addresses on a per request basis. The caching algorithm
    * works as follows:
   //  * - If an IP Address is already stored in the frequency cache
   //  * - - Increment the frequency in the frequency cache
