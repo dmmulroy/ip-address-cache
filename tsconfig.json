@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "allowJs": true,
+    "noErrorTruncation": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true
+  },
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true
+  }
+}
