@@ -13,7 +13,7 @@ However, if I had more time, these are a few things that I would do differently
 
 ## What is the runtime complexity of each function?
 
-- `request_handled` runs in O(1) time and benefits from the requirement that we only track the top 100 most frequent addresses. At worst, we insert the IP Address into the `frequencyCache` (hashmap) O(1) and in some cases resort the `frequencyList` (array) O(100). O(1 + 100) simplifies to a constant time of O(1).
+- `request_handled` runs in O(1) time and benefits from the requirement that we only track the top 100 most frequent addresses. At worst, we insert the IP Address into the `frequencyCache` (hashmap) O(1), check if the ip address is already in the `frequencyList` O(100), and in some cases resort the `frequencyList` (array) O(100). O(1 + 100 + 100) simplifies to a constant time of O(1).
 - `top100` runs in O(1) time and simply returns the already sorted `frequencyList` stored in memory.
 - `clear` runs in O(1) time as well and simply reassigns the internal data structures to new instances allowing the old ones to be garbage collected.
 
